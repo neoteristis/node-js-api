@@ -4,6 +4,7 @@
 
 Tutorial 1 : [Medium - Build your first RESTful API with Node.js and Express.js](https://medium.com/@sayalijangam17/build-your-first-restful-api-with-node-js-and-express-js-fe5c21b6a667)  
 Tutorial 2 : [StackAbuse - Building a REST API with Node and Express](https://stackabuse.com/building-a-rest-api-with-node-and-express/)
+Tutorial 3 : [How I structure my REST APIs](https://dev.to/larswaechter/how-i-structure-my-rest-apis-11k4)
 
 ## Project setup
 
