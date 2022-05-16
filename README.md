@@ -6,6 +6,13 @@ Tutorial 1 : [Medium - Build your first RESTful API with Node.js and Express.js]
 Tutorial 2 : [StackAbuse - Building a REST API with Node and Express](https://stackabuse.com/building-a-rest-api-with-node-and-express/)
 Tutorial 3 : [How I structure my REST APIs](https://dev.to/larswaechter/how-i-structure-my-rest-apis-11k4)
 
+Tutorial 1 was very very basic.
+Tutorial 2 would be great with a little bit more knowledge, I decided to start with "Tutorial 4"
+The project structure from "Tutorial 3" was too advanced for me. I decided to use `express-generator` instead.
+
+I found out that the Express had a tutorial on its website.
+Tutorial 4 : https://expressjs.com/en/starter/installing.html
+
 ## Project setup
 
 - `npm init` : start a node js project
@@ -15,6 +22,7 @@ Tutorial 3 : [How I structure my REST APIs](https://dev.to/larswaechter/how-i-st
     - tells which packages with their version I use
     - is used to install all necessary packages when cloning the repo for example
   - Create the folder *node_modules* which stores all package
+- `nxp express-generator` : generator default project structure
 
 ## Useful notes
 
