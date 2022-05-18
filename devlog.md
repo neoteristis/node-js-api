@@ -29,6 +29,8 @@ I found out that the Express had a tutorial on its website. Tutorial
         - is used to install all necessary packages when cloning the repo for example
     - Create the folder *node_modules* which stores all package
 - `nxp express-generator` : generator default project structure
+- `npm install nodemon` : allows the auto-reload when files are changed. Might have some other utility that I'm note
+  aware of.
 
 ## Useful notes
 
