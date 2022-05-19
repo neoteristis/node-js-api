@@ -59,7 +59,7 @@ app.post('/books/:id', (req, res) => {
     }
 });
 
-// Delete a book with its ID
+// Delete a book by selecting it with its ID
 app.delete('/books/:id', (req, res) => {
     let bookId = req.params.id;
     // Check if the book id that needs to be deleted exists or not
@@ -69,6 +69,24 @@ app.delete('/books/:id', (req, res) => {
         res.status(200);
         // Return a success message
         res.send(`Book n°${bookId} named ${bookName} was successfully deleted.`);
+    } else {
+        res.status(404);
+        // Return error message
+        res.send('The book was not found.');
+    }
+});
+
+// Update book name by selecting it with its ID
+app.put('/books/:id', (req, res) => {
+    let bookId = req.params.id;
+    let bookNewName = req.body.name;
+    // Check if the book id that needs to be modified exists or not
+    if (Object.keys(bookList).includes(bookId)) {
+        // Update the book name
+        bookList[bookId] = bookNewName;
+        res.status(200);
+        // Return a success message
+        res.send(`Book n°${bookId} was renamed to ${bookNewName}.`);
     } else {
         res.status(404);
         // Return error message
