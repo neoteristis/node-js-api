@@ -8,7 +8,7 @@ const port = 8080;
 
 // Indicate to Express.js that I'm using an additional plugin to treat parameters
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Get the source route
 app.get('/', (req, res) => {
@@ -37,7 +37,7 @@ app.get('/books/:id', (req, res) => {
     } else {
         res.status(404);
         // Return an error
-        res.send('Book not found.')
+        res.send('Book not found.');
     }
 });
 
@@ -49,13 +49,30 @@ app.post('/books/:id', (req, res) => {
     if (Object.keys(bookList).includes(bookId)) {
         res.status(409);
         // Return an error
-        res.send('Book with this ID already exists.')
+        res.send('Book with this ID already exists.');
     } else {
         res.status(200);
         // Add the book to the list
         bookList[bookId] = bookName;
         // Return message of success
-        res.send(`The book ${bookName} (ID = ${bookId}) was successfully added in the list.`)
+        res.send(`The book ${bookName} (ID = ${bookId}) was successfully added in the list.`);
+    }
+});
+
+// Delete a book with its ID
+app.delete('/books/:id', (req, res) => {
+    let bookId = req.params.id;
+    // Check if the book id that needs to be deleted exists or not
+    if (Object.keys(bookList).includes(bookId)) {
+        let bookName = bookList[bookId];
+        delete bookList[bookId];
+        res.status(200);
+        // Return a success message
+        res.send(`Book n°${bookId} named ${bookName} was successfully deleted.`);
+    } else {
+        res.status(404);
+        // Return error message
+        res.send('The book was not found.');
     }
 });
 
