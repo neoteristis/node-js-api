@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "hello-world": "nodemon hello-world.js"
+    "hello-world": "nodemon hello-world.js",
+    "library": "nodemon library-api.js"
   },
   "dependencies": {
     "body-parser": "^1.20.0",

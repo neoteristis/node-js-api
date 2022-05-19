@@ -58,3 +58,8 @@ content : `nodemon index.js`
   install the CORS middleware. (see tutorial 2)
     - CORS : cross-origin resource sharing
     - Installation : `npm install --save cors`
+
+# 19 May 2022
+
+Stopped trying to create a good folder structure and started working on the API itself.
+I'm using **Insomnia** to use my API.
